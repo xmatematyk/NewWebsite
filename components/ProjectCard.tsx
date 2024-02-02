@@ -14,20 +14,30 @@ interface Props {
 const ProjectCard = ({ title, link, img }: Props) => {
   const [isPortfolioModalOpen, setPortfolioModalOpen] = useState(false);
   const [isDiscordBotModalOpen, setDiscordBotModalOpen] = useState(false);
+  const [isVoltBotModalOpen, setVoltModalOpen] = useState(false);
 
    const openPortfolioModal = () => {
     setPortfolioModalOpen(true);
-    setDiscordBotModalOpen(false); // Zamknięcie innego modala, jeśli jest otwarty
+    setDiscordBotModalOpen(false); 
+    setPortfolioModalOpen(false);
   };
 
   const openDiscordBotModal = () => {
     setDiscordBotModalOpen(true);
-    setPortfolioModalOpen(false); // Zamknięcie innego modala, jeśli jest otwarty
+    setVoltModalOpen(false);
+    setPortfolioModalOpen(false); 
+  };
+
+  const openVoltVoltModal = () => {
+    setPortfolioModalOpen(false);
+    setDiscordBotModalOpen(false);
+    setVoltModalOpen(true);
   };
 
   const handleOverlayClick = () => {
     setPortfolioModalOpen(false);
     setDiscordBotModalOpen(false);
+    setVoltModalOpen(false);
   };
 
 
@@ -126,7 +136,7 @@ return (
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.5, transition: { duration: 0.5 } }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 w-full h-full bg-black backdrop-blur-md bg-opacity-50 flex items-center justify-center"
+      className="fixed top-0 left-0 w-full h-full bg-black backdrop-blur-md bg-opacity-50 flex items-center justify-center z-50"
       onClick={handleOverlayClick}
     >
       <motion.div
@@ -144,7 +154,7 @@ return (
       
        <div className=" p-4 rounded-lg w-[50rem] h-[50rem] ">
        <h2 className="text-center"></h2>
-       <div className=" h-50 border-[1px] border-blue-600 overflow-hidden relative rounded-lg group">
+       <div className=" h-50 border-[1px]  border-blue-600 overflow-hidden relative rounded-lg group">
        <Image
              className="object-cover translate-y-0 transition-transform duration-[3s] z-i"
              src={PlaceHolder}
@@ -169,7 +179,7 @@ return (
             Linki
             <div className="wrapper top-[-8.8rem] w-[40rem] left-[6rem] absolute"></div>
             <h2 className="text-blue-300 font-normal text-base md:top-[0.5rem]  relative">
-            <a href="">Github</a> • <a href="">My Discord</a> • <a href="">GalaxyNetwork Discord</a>
+            <a href="">Github</a> • <a href="">My Discord</a> 
           </h2>
           
           </h1> 
@@ -177,10 +187,92 @@ return (
             
         </div>
       </div>
+
+      
       </motion.div>
     </motion.div>
-    )}  
-    
+)}  
+
+<div
+      className="w-full h-50 border-[1px] border-blue-600 overflow-hidden relative rounded-lg group"
+      onClick={openVoltVoltModal}
+    >
+       <Image
+          className="object-cover translate-y-0 transition-transform duration-[3s] z-i"
+          width={500}
+          height={350}
+          src={PlaceHolder}
+          alt="cyskportfolio"
+        />
+    </div>
+
+    {isVoltBotModalOpen && (
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.5, transition: { duration: 0.5 } }}
+      transition={{ duration: 0.5 }}
+      className="fixed top-0 left-0 w-full h-full bg-black backdrop-blur-md bg-opacity-50 flex items-center justify-center z-50"
+      onClick={handleOverlayClick}
+    >
+      <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.5, transition: { duration: 35 } }}
+      transition={{ duration: 0.5 }}
+      className="p-4 rounded-lg w-[50rem] h-[50rem]"
+    >
+        
+       <div
+       className="fixed top-0 left-0 w-full  h-full bg-black backdrop-blur-md bg-opacity-50 flex items-center justify-center    "
+       onClick={handleOverlayClick}
+     >
+      
+       <div className=" p-4 rounded-lg w-[50rem] h-[50rem] ">
+       <h2 className="text-center"></h2>
+       <div className=" h-50 border-[1px]  border-blue-600 overflow-hidden relative rounded-lg group">
+       <Image
+             className="object-cover translate-y-0 transition-transform duration-[3s] z-i"
+             src={PlaceHolder}
+             width={800}
+             alt="cyskportfolio"
+           />
+        </div>
+          <h1 className="text-white font-bold text-3xl p-2 relative">
+            Discord BOT
+            <div className="wrapper top-[-8.3rem] w-2/3 left-[14rem] absolute"></div>
+          </h1>
+
+          <h2 className="text-blue-300 font-normal text-base top-[-0.5rem] left-[0.5rem] relative">
+            discord.py v2
+          </h2>
+
+          <h2 className="pl-[0.5rem] top-[-.5rem] relative">
+          BOT dla gildii VOLT to zaawansowane narzędzie z funkcją weryfikacji dla skutecznej kontroli dostępu. Innowacyjny system powitalny tworzy przyjemne przyjęcie dla nowych członków, wzmacniając więzi społeczności.
+
+Dodatkowo, bot posiada zautomatyzowany system ticketów, eliminujący opóźnienia w reakcji na pytania i problemy. Funkcje antyraid, antysłowa i antylinki skutecznie zabezpieczają serwer przed niepożądanymi zdarzeniami.
+
+Cel to stworzenie kompleksowego i łatwego w obsłudze narzędzia, co sprawia, że bot jest w pełni zautomatyzowany. Niestety, ze względów bezpieczeństwa, kod źródłowy nie jest dostępny publicznie.
+          </h2>
+
+          <h1 className="text-white font-bold text-3xl top-[1rem] pl-[0.5rem] md:top-[0.5rem] md:pl-[0.5rem] relative">
+            Linki
+            <div className="wrapper top-[-8.8rem] w-[40rem] left-[6rem] absolute"></div>
+            <h2 className="text-blue-300 font-normal text-base md:top-[0.5rem]  relative">
+            <a href="">Github</a> • <a href="https://discord.gg/v3xHWHRX2R" target="_blank">Gildia VOLT</a> 
+          </h2>
+          
+          </h1> 
+          
+            
+        </div>
+      </div>
+
+      
+      </motion.div>
+    </motion.div>
+)}  
+
     </>
   );
 };

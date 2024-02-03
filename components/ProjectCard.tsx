@@ -16,23 +16,25 @@ const ProjectCard = ({ title, link, img }: Props) => {
   const [isDiscordBotModalOpen, setDiscordBotModalOpen] = useState(false);
   const [isVoltBotModalOpen, setVoltModalOpen] = useState(false);
 
-   const openPortfolioModal = () => {
+  const openPortfolioModal = () => {
     setPortfolioModalOpen(true);
-    setDiscordBotModalOpen(false); 
-    setPortfolioModalOpen(false);
+    setDiscordBotModalOpen(false);
+    setVoltModalOpen(false);
   };
 
   const openDiscordBotModal = () => {
     setDiscordBotModalOpen(true);
     setVoltModalOpen(false);
-    setPortfolioModalOpen(false); 
+    setPortfolioModalOpen(false);  // This line should probably be removed
   };
 
-  const openVoltVoltModal = () => {
+  const openDiscordVOLTModal = () => {
     setPortfolioModalOpen(false);
     setDiscordBotModalOpen(false);
     setVoltModalOpen(true);
   };
+
+
 
   const handleOverlayClick = () => {
     setPortfolioModalOpen(false);
@@ -195,7 +197,7 @@ return (
 
 <div
       className="w-full h-50 border-[1px] border-blue-600 overflow-hidden relative rounded-lg group"
-      onClick={openVoltVoltModal}
+      onClick={openDiscordVOLTModal}
     >
        <Image
           className="object-cover translate-y-0 transition-transform duration-[3s] z-i"

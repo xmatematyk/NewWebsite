@@ -1,6 +1,8 @@
 import Image from "next/image";
 import ProfileImg from "../public/img/profileImg.jpg";
 
+
+
 const Banner = () => {
   return (
     <div className="wrapper flex flex-col md:flex-row items-center gap-10">
@@ -21,8 +23,13 @@ const Banner = () => {
         <p className="text-base tracking-wide text-center md:text-left">
           Czesc! jestem Olivier, oraz mam 16 lat. W wolnym czasie lubie pograc w gry komputerowe oraz programowac, jednak te programowanie zdobyło moje serce. Programuje od 2021 (3 lata) i nadal sprawia mi to dużo zabawy.
         </p>
+        <div className="top-5 relative">
+        <img src="https://discord.c99.nl/widget/theme-4/551123399834075137.png" alt="" />
       </div>
+      </div>
+      
     </div>
+    
   );
 };
 

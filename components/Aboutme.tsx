@@ -13,11 +13,14 @@ const Aboutme = () => {
           przez co jestem dosyc toksyczną osobą. Odkąd poznałem swiat tworzenia botów Discord wciągnałem sie w tworzenie własnych botów, które są  wstanie
           zautoamtyzowac cały serwer. Od jakiegos czasu uczę się tworzyc grafiki - głownie loga i grafiki dla botów do embeda.
         </p>
+        
         <p>
            
         </p>
       </div>
+     
     </div>
+    
   );
 };
 

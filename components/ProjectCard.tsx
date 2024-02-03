@@ -259,7 +259,7 @@ Cel to stworzenie kompleksowego i łatwego w obsłudze narzędzia, co sprawia, �
             Linki
             <div className="wrapper top-[-8.8rem] w-[40rem] left-[6rem] absolute"></div>
             <h2 className="text-blue-300 font-normal text-base md:top-[0.5rem]  relative">
-            <a href="">Github</a> • <a href="https://discord.gg/v3xHWHRX2R" target="_blank">Gildia VOLT</a> 
+            <a href="">Github</a> • <a href="https://discord.gg/v3xHWHRX2R" target="_blank q">Gildia VOLT</a> 
           </h2>
           
           </h1> 

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Portfolio1 from "../public/img/projects/portfolio1.png"
+import VOLT from "../public/img/projectVOLT.jpg"
 import PlaceHolder from "../public/img/project-placeholder.svg"
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -50,10 +51,10 @@ return (
       onClick={openPortfolioModal}
     >
       <Image
-          className="object-cover translate-y-0 transition-transform duration-[3s] z-i"
+          className="object-fill h-[15rem] translate-y-0 transition-transform duration-[3s] z-i"
           width={500}
           height={350}
-          src={PlaceHolder}
+          src={img}
           alt="cyskportfolio"
         />
     </div>
@@ -196,18 +197,17 @@ return (
 )}  
 
 <div
-      className="w-full h-50 border-[1px] border-blue-600 overflow-hidden relative rounded-lg group"
-      onClick={openDiscordVOLTModal}
-    >
-       <Image
-          className="object-cover translate-y-0 transition-transform duration-[3s] z-i"
-          width={500}
-          height={350}
-          src={PlaceHolder}
-          alt="cyskportfolio"
-        />
-    </div>
-
+  className="w-full  relative border-[1px] border-blue-600 rounded-lg group"
+  onClick={openDiscordVOLTModal}
+>
+  <Image
+    className="object-fil h-[15rem] translate-y-0 transition-transform duration-[3s] z-i"
+    width={500}
+    height={100}
+    src={VOLT}
+    alt="cyskportfolio"
+  />
+</div>
     {isVoltBotModalOpen && (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -234,8 +234,8 @@ return (
        <h2 className="text-center"></h2>
        <div className=" h-50 border-[1px]  border-blue-600 overflow-hidden relative rounded-lg group">
        <Image
-             className="object-cover translate-y-0 transition-transform duration-[3s] z-i"
-             src={PlaceHolder}
+             className="object-fill h-[26rem] translate-y-0 transition-transform duration-[3s] z-i"
+             src={VOLT}
              width={800}
              alt="cyskportfolio"
            />

@@ -1,5 +1,7 @@
+"use client"
 import Image from "next/image";
 import ProfileImg from "../public/img/profileImg.jpg";
+import Typewriter from "typewriter-effect"
 
 
 
@@ -18,7 +20,21 @@ const Banner = () => {
       <div className="w-3/4 flex flex-col items-center md:items-start    gap-2">
         <h1 className="text-5xl font-bold text-white">Feskyy</h1>
         <h3 className="text-xl md:text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-red-300 to-indigo-300 tracking-wide">
-          FRONT-END Developer
+          <Typewriter 
+            options={{
+              strings: [
+                "BOT Developer",
+                "WEB Developer",
+                "Next.js Developer",
+                "Python Developer",
+              ],
+              autoStart: true,
+              loop: true,
+              delay: 20,
+              deleteSpeed: 10,
+              
+            }}
+          />
         </h3>
         <p className="text-base tracking-wide text-center md:text-left">
           Czesc! jestem Olivier, oraz mam 16 lat. W wolnym czasie lubie pograc w gry komputerowe oraz programowac, jednak te programowanie zdobyło moje serce. Programuje od 2021 (3 lata) i nadal sprawia mi to dużo zabawy.

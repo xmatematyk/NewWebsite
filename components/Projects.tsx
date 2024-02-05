@@ -1,17 +1,31 @@
 import React, { useState } from "react";
-import { FaProjectDiagram } from "react-icons/fa";
-import Image from "../public/img/projects/image.png";
+import Image from "next/image"; 
+import Cysk from "../public/img/projects/image.png";
 import Jajo from "../public/img/projects/Jajo.png";
 import ProjectCard from "./ProjectCard";
 
-const projects = [
+interface ModalState {
+  [projectId: number]: boolean;
+}
+
+interface Project {
+  id: number;
+  title: string;
+  link: string;
+  len: string;
+  des: string;
+  img: StaticImageData | string; // Zaktualizowano typ obrazu
+  category: string;
+}
+
+const projects: Project[] = [
   {
     id: 1,
     title: "Portfolio Website",
     link: "",
     len: "next.js • tailwindcss ",
     des: "Strona została zrobiona przy użyciu nowoczesnych technologi, takich jak next.js czy tailwindcss.  Formularz przedstawiony na stronie jest połączony wraz z discordem poprzez webhooka, dzieki czemu wysłane wiadomości bedą wysyłane na kanał na discordzie. Strona jest open-source dzieki czemu każdy ma dostęp. Strona została wykonana w pełni przez vulsa & .drozdzik. Strona nie posiada responsywności, przez co może słabo działac na telefonach. W celu uzyskania source strony zapraszam na mojego githuba, bądz na discord hell-deva gdzie na kanale premium jest wszystko dokładnie wyjaśnione.",
-    img: Image,
+    img: Cysk,
     category: "Web",
   },
   {
@@ -25,19 +39,6 @@ const projects = [
   },
 ];
 
-interface ModalState {
-  [projectId: number]: boolean;
-}
-
-interface Project {
-  id: number;
-  title: string;
-  link: string;
-  len: string;
-  des: string;
-  category: string;
-}
-
 const Projects = () => {
   const [modals, setModals] = useState<ModalState>({});
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -45,9 +46,17 @@ const Projects = () => {
   const openModal = (project: Project) => {
     setModals((prevModals) => ({ ...prevModals, [project.id]: true }));
   };
-  
+
   const closeModal = (project: Project) => {
     setModals((prevModals) => ({ ...prevModals, [project.id]: false }));
+  };
+
+  const filterProjects = () => {
+    if (selectedCategory === "All") {
+      return projects;
+    } else {
+      return projects.filter((project) => project.category === selectedCategory);
+    }
   };
 
   return (
@@ -100,11 +109,11 @@ const Projects = () => {
         </button>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center">
-        {projects.map((project) => (
+        {filterProjects().map((project) => (
           <ProjectCard
             key={project.id}
             project={project}
-            isModalOpen={modals[project.id] ?? false} // Dodano ?? false, aby uniknąć undefined
+            isModalOpen={modals[project.id] ?? false}
             openModal={() => openModal(project)}
             closeModal={() => closeModal(project)}
           />

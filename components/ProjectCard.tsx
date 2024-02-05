@@ -9,7 +9,7 @@ interface Props {
     id: number;
     title: string;
     link: string;
-    img: string;
+    img: { src: string };
     len: string;
     des: string;
   };
@@ -42,7 +42,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
           className={"object-fill h-[15rem] translate-y-0 transition-transform duration-[3s] z-i"}
           width={500}
           height={350}
-          src={img} 
+          src={img.src} 
           alt="Feskyy"
         />
       </div>
@@ -77,7 +77,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
       className="object-cover w-full h-full"
       width={800}
       height={478}
-      src={img}
+      src={img.src}
       alt="Feskyy"
     />
   </div>

@@ -1,47 +1,53 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import { FaProjectDiagram } from "react-icons/fa";
 import Image from "../public/img/projects/image.png";
 import Jajo from "../public/img/projects/Jajo.png";
 import ProjectCard from "./ProjectCard";
 
 const projects = [
-  { 
-    id: 1, 
-    title: "Portfolio Website", 
-    link: "", 
-    len: "next.js • tailwindcss ",  
-    des: "Strona została zrobiona przy użyciu nowoczesnych technologi, takich jak next.js czy tailwindcss.  Formularz przedstawiony na stronie jest połączony wraz z discordem poprzez webhooka, dzieki czemu wysłane wiadomości bedą wysyłane na kanał na discordzie. Strona jest open-source dzieki czemu każdy ma dostęp. Strona została wykonana w pełni przez vulsa & .drozdzik. Strona nie posiada responsywności, przez co może słabo działac na telefonach. W celu uzyskania source strony zapraszam na mojego githuba, bądz na discord hell-deva gdzie na kanale premium jest wszystko dokładnie wyjaśnione.", 
-    img: Image,  
-    category: "Web" 
+  {
+    id: 1,
+    title: "Portfolio Website",
+    link: "",
+    len: "next.js • tailwindcss ",
+    des: "Strona została zrobiona przy użyciu nowoczesnych technologi, takich jak next.js czy tailwindcss.  Formularz przedstawiony na stronie jest połączony wraz z discordem poprzez webhooka, dzieki czemu wysłane wiadomości bedą wysyłane na kanał na discordzie. Strona jest open-source dzieki czemu każdy ma dostęp. Strona została wykonana w pełni przez vulsa & .drozdzik. Strona nie posiada responsywności, przez co może słabo działac na telefonach. W celu uzyskania source strony zapraszam na mojego githuba, bądz na discord hell-deva gdzie na kanale premium jest wszystko dokładnie wyjaśnione.",
+    img: Image,
+    category: "Web",
   },
-  { 
-    id: 2, 
-    title: "BOT Discord JAJO", 
-    len: "discord.py • MongoDB ", 
-    des: "BOT dla gildii JAJO to zaawansowane narzędzie z funkcją weryfikacji dla skutecznej kontroli dostępu. Innowacyjny system powitalny tworzy przyjemne przyjęcie dla nowych członków, wzmacniając więzi społeczności. Dodatkowo, bot posiada zautomatyzowany system ticketów, eliminujący opóźnienia w reakcji na pytania i problemy. Funkcje antyraid, antysłowa i antylinki skutecznie zabezpieczają serwer przed niepożądanymi zdarzeniami. Cel to stworzenie kompleksowego i łatwego w obsłudze narzędzia, co sprawia, że bot jest w pełni zautomatyzowany. Niestety, ze względów bezpieczeństwa, kod źródłowy nie jest dostępny publicznie.", 
-    link: "", 
-    img: Jajo, 
-    category: "Bot" 
+  {
+    id: 2,
+    title: "BOT Discord JAJO",
+    len: "discord.py • MongoDB ",
+    des: "BOT dla gildii JAJO to zaawansowane narzędzie z funkcją weryfikacji dla skutecznej kontroli dostępu. Innowacyjny system powitalny tworzy przyjemne przyjęcie dla nowych członków, wzmacniając więzi społeczności. Dodatkowo, bot posiada zautomatyzowany system ticketów, eliminujący opóźnienia w reakcji na pytania i problemy. Funkcje antyraid, antysłowa i antylinki skutecznie zabezpieczają serwer przed niepożądanymi zdarzeniami. Cel to stworzenie kompleksowego i łatwego w obsłudze narzędzia, co sprawia, że bot jest w pełni zautomatyzowany. Niestety, ze względów bezpieczeństwa, kod źródłowy nie jest dostępny publicznie.",
+    link: "",
+    img: Jajo,
+    category: "Bot",
   },
 ];
 
+interface ModalState {
+  [projectId: number]: boolean;
+}
+
+interface Project {
+  id: number;
+  title: string;
+  link: string;
+  len: string;
+  des: string;
+  category: string;
+}
+
 const Projects = () => {
-  const [modals, setModals] = useState({});
+  const [modals, setModals] = useState<ModalState>({});
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const openModal = (project) => {
+  const openModal = (project: Project) => {
     setModals((prevModals) => ({ ...prevModals, [project.id]: true }));
   };
-
-  const closeModal = (project) => {
+  
+  const closeModal = (project: Project) => {
     setModals((prevModals) => ({ ...prevModals, [project.id]: false }));
-  };
-
-  const filterProjects = () => {
-    if (selectedCategory === "All") {
-      return projects;
-    } else {
-      return projects.filter((project) => project.category === selectedCategory);
-    }
   };
 
   return (
@@ -56,7 +62,7 @@ const Projects = () => {
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 640 512"
               height="1em"
               width="1em"
@@ -67,9 +73,9 @@ const Projects = () => {
           </span>
         </div>
       </div>
-      <div className="flex items-center  justify-center gap-4 text-2xl group pb-8">
+      <div className="flex items-center justify-center  gap-4 text-2xl group pb-8">
         <button
-          className={`cursor-pointer   hover:text-white  focus:outline-none ${
+          className={`cursor-pointer focus:outline-none ${
             selectedCategory === "All" ? "text-blue-600" : "text-gray-500"
           }`}
           onClick={() => setSelectedCategory("All")}
@@ -77,7 +83,7 @@ const Projects = () => {
           All
         </button>
         <button
-          className={`cursor-pointer  hover:text-white  focus:outline-none ${
+          className={`cursor-pointer focus:outline-none ${
             selectedCategory === "Bot" ? "text-blue-600" : "text-gray-500"
           }`}
           onClick={() => setSelectedCategory("Bot")}
@@ -85,7 +91,7 @@ const Projects = () => {
           Boty
         </button>
         <button
-          className={`cursor-pointer  hover:text-white  focus:outline-none ${
+          className={`cursor-pointer focus:outline-none ${
             selectedCategory === "Web" ? "text-blue-600" : "text-gray-500"
           }`}
           onClick={() => setSelectedCategory("Web")}
@@ -94,11 +100,11 @@ const Projects = () => {
         </button>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center">
-        {filterProjects().map((project) => (
+        {projects.map((project) => (
           <ProjectCard
             key={project.id}
             project={project}
-            isModalOpen={modals[project.id]}
+            isModalOpen={modals[project.id] ?? false} // Dodano ?? false, aby uniknąć undefined
             openModal={() => openModal(project)}
             closeModal={() => closeModal(project)}
           />

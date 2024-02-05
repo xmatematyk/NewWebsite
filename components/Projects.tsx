@@ -14,7 +14,7 @@ interface Project {
   link: string;
   len: string;
   des: string;
-  img: StaticImageData | string; // Zaktualizowano typ obrazu
+  img: any; // Zaktualizowano typ obrazu
   category: string;
 }
 

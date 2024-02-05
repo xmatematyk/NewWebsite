@@ -43,6 +43,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
           width={500}
           height={350}
           src={img} 
+          alt="Feskyy"
         />
       </div>
 
@@ -77,7 +78,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
       width={800}
       height={478}
       src={img}
-      alt={title}
+      alt="Feskyy"
     />
   </div>
 </div>

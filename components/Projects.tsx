@@ -75,7 +75,7 @@ const Projects = () => {
       </div>
       <div className="flex items-center justify-center  gap-4 text-2xl group pb-8">
         <button
-          className={`cursor-pointer focus:outline-none ${
+          className={`cursor-pointer hover:text-white focus:outline-none ${
             selectedCategory === "All" ? "text-blue-600" : "text-gray-500"
           }`}
           onClick={() => setSelectedCategory("All")}
@@ -83,7 +83,7 @@ const Projects = () => {
           All
         </button>
         <button
-          className={`cursor-pointer focus:outline-none ${
+          className={`cursor-pointer  hover:text-white focus:outline-none ${
             selectedCategory === "Bot" ? "text-blue-600" : "text-gray-500"
           }`}
           onClick={() => setSelectedCategory("Bot")}
@@ -91,7 +91,7 @@ const Projects = () => {
           Boty
         </button>
         <button
-          className={`cursor-pointer focus:outline-none ${
+          className={`cursor-pointer hover:text-white  focus:outline-none ${
             selectedCategory === "Web" ? "text-blue-600" : "text-gray-500"
           }`}
           onClick={() => setSelectedCategory("Web")}

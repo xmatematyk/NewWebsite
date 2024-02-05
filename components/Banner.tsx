@@ -3,8 +3,6 @@ import Image from "next/image";
 import ProfileImg from "../public/img/profileImg.jpg";
 import Typewriter from "typewriter-effect"
 
-
-
 const Banner = () => {
   return (
     <div className="wrapper flex  flex-col md:flex-row items-center gap-10">

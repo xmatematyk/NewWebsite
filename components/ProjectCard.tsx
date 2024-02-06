@@ -8,10 +8,11 @@ interface Props {
   project: {
     id: number;
     title: string;
-    link: string;
     img: { src: string };
     len: string;
     des: string;
+    linkdc: string;
+    linkhub: string;
   };
   isModalOpen: boolean;
   openModal: (id: number) => void;
@@ -19,7 +20,7 @@ interface Props {
 }
 
 const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => {
-  const { id, title, img, len, des } = project;
+  const { id, title, img, len, des, linkdc, linkhub } = project;
   const [titleWidth, setTitleWidth] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -33,7 +34,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
   return (
     <>
       <div
-        className={`w-full h-50 border-[1px] border-blue-600 overflow-hidden relative rounded-lg group transform transition-transform duration-300 ${isHovered ? 'hover:scale-110' : ''}`}
+        className={`w-full h-50 border-[1px] border-red-600 overflow-hidden relative rounded-lg group transform transition-transform duration-300 ${isHovered ? 'hover:scale-110' : ''}`}
         onClick={() => openModal(id)}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
@@ -49,13 +50,13 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
 
       {isModalOpen && (
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 50 }}
-          transition={{ duration: 0.5 }}
-          className="fixed top-0 left-0 w-full h-full bg-black backdrop-blur-md bg-opacity-50 flex items-center justify-center z-50"
-          onClick={closeModal}
-        >
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 50 }}
+        transition={{ duration: 0.5 }}
+        className="fixed top-0 left-0 w-full h-full bg-black backdrop-blur-md bg-opacity-50 flex items-center justify-center z-50"
+        onClick={closeModal}
+      >
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -63,18 +64,17 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
             transition={{ duration: 0.5 }}
             className="p-4 rounded-lg w-[50rem] h-[50rem]"
           >
+             <div
+       className="fixed top-0 left-0 w-full  h-full bg-black backdrop-blur-md bg-opacity-50 flex items-center justify-center z-50  "
+       onClick={closeModal}
+            >
             <div className="p-4 rounded-lg w-[50rem] h-[50rem]">
-              <div className="h-50 border-[1px] border-blue-600 overflow-hidden relative rounded-lg group">
+              <div className="h-50 border-[1px] border-red-600 overflow-hidden relative rounded-lg group">
   <div
-    className={`relative h-full w-full overflow-hidden border-[1px] border-blue-600 rounded-lg ${
-      img.src && img.src.endsWith('.webp')
-        ? 'translate-y-0 transition-transform duration-[3s]'
-        : ''
-    }`}
-    style={{ aspectRatio: "16/9" }}
+    className="relative h-full w-full overflow-hidden border-[1px] border-red-600 rounded-lg"
   >
     <NextImage
-      className="object-cover w-full h-full"
+      className="object-cover"
       width={800}
       height={478}
       src={img.src}
@@ -86,7 +86,8 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
                 {title}
                 <div className="wrapper top-[-8.3rem] w-3/5 left-[19rem] absolute"></div>
               </h1>
-              <h2 className="text-blue-300 font-normal text-base top-[-0.5rem] left-[0.5rem] relative">
+
+              <h2 className="text-red-600 font-normal text-base top-[-0.5rem] left-[0.5rem] relative">
                 {len} 
               </h2>
               <h2 className="pl-[0.5rem] top-[-.5rem] relative">
@@ -95,14 +96,14 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
               <h1 className="text-white font-bold text-3xl top-[1rem] pl-[0.5rem] md:top-[0.5rem] md:pl-[0.5rem] relative">
                 Linki
                 <div className="wrapper top-[-8.8rem] w-[40rem] left-[6rem] absolute"></div>
-                <h2 className="text-blue-300 font-normal text-base md:top-[0.5rem]  relative">
-                  <a href="#">Github</a> • <a href="#">My Discord</a>
+                <h2 className="text-red-600 font-normal text-base md:top-[0.5rem]  relative">
+                  <a href={linkhub}>Github</a> • <a href={linkdc}>My Discord</a>
                 </h2>
               </h1>
             </div>
+            </div>
           </motion.div>
         </motion.div>
-        
       )}
 
     </>

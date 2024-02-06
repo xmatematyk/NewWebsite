@@ -11,10 +11,11 @@ interface ModalState {
 interface Project {
   id: number;
   title: string;
-  link: string;
+  linkdc: string;
+  linkhub: string;
   len: string;
   des: string;
-  img: any; // Zaktualizowano typ obrazu
+  img: any;
   category: string;
 }
 
@@ -22,7 +23,8 @@ const projects: Project[] = [
   {
     id: 1,
     title: "Portfolio Website",
-    link: "",
+    linkdc: "https://google.com",
+    linkhub: "https://pornhub.com",
     len: "next.js • tailwindcss ",
     des: "Strona została zrobiona przy użyciu nowoczesnych technologi, takich jak next.js czy tailwindcss.  Formularz przedstawiony na stronie jest połączony wraz z discordem poprzez webhooka, dzieki czemu wysłane wiadomości bedą wysyłane na kanał na discordzie. Strona jest open-source dzieki czemu każdy ma dostęp. Strona została wykonana w pełni przez vulsa & .drozdzik. Strona nie posiada responsywności, przez co może słabo działac na telefonach. W celu uzyskania source strony zapraszam na mojego githuba, bądz na discord hell-deva gdzie na kanale premium jest wszystko dokładnie wyjaśnione.",
     img: Cysk,
@@ -33,7 +35,8 @@ const projects: Project[] = [
     title: "BOT Discord JAJO",
     len: "discord.py • MongoDB ",
     des: "BOT dla gildii JAJO to zaawansowane narzędzie z funkcją weryfikacji dla skutecznej kontroli dostępu. Innowacyjny system powitalny tworzy przyjemne przyjęcie dla nowych członków, wzmacniając więzi społeczności. Dodatkowo, bot posiada zautomatyzowany system ticketów, eliminujący opóźnienia w reakcji na pytania i problemy. Funkcje antyraid, antysłowa i antylinki skutecznie zabezpieczają serwer przed niepożądanymi zdarzeniami. Cel to stworzenie kompleksowego i łatwego w obsłudze narzędzia, co sprawia, że bot jest w pełni zautomatyzowany. Niestety, ze względów bezpieczeństwa, kod źródłowy nie jest dostępny publicznie.",
-    link: "",
+    linkdc: "https://google.com",
+    linkhub: "https://pornhub.com",
     img: Jajo,
     category: "Bot",
   },
@@ -65,9 +68,9 @@ const Projects = () => {
         <div className="flex items-center gap-4 text-2xl group pb-8">
           <h3 className="font-semibold relative overflow-hidden">
             Moje projekty
-            <span className="w-full h-[2px] absolute bottom-0 left-0 inline-block bg-blue-600 -translate-x-[100%] group-hover:translate-x-0 transition-transform duration-300"></span>
+            <span className="w-full h-[2px] absolute bottom-0 left-0 inline-block bg-red-600 -translate-x-[100%] group-hover:translate-x-0 transition-transform duration-300"></span>
           </h3>
-          <span className="text-blue-600">
+          <span className="text-red-600">
             <svg
               stroke="currentColor"
               fill="currentColor"
@@ -85,7 +88,7 @@ const Projects = () => {
       <div className="flex items-center justify-center  gap-4 text-2xl group pb-8">
         <button
           className={`cursor-pointer hover:text-white focus:outline-none ${
-            selectedCategory === "All" ? "text-blue-600" : "text-gray-500"
+            selectedCategory === "All" ? "text-red-600" : "text-gray-500"
           }`}
           onClick={() => setSelectedCategory("All")}
         >
@@ -93,7 +96,7 @@ const Projects = () => {
         </button>
         <button
           className={`cursor-pointer  hover:text-white focus:outline-none ${
-            selectedCategory === "Bot" ? "text-blue-600" : "text-gray-500"
+            selectedCategory === "Bot" ? "text-red-600" : "text-gray-500"
           }`}
           onClick={() => setSelectedCategory("Bot")}
         >
@@ -101,7 +104,7 @@ const Projects = () => {
         </button>
         <button
           className={`cursor-pointer hover:text-white  focus:outline-none ${
-            selectedCategory === "Web" ? "text-blue-600" : "text-gray-500"
+            selectedCategory === "Web" ? "text-red-600" : "text-gray-500"
           }`}
           onClick={() => setSelectedCategory("Web")}
         >

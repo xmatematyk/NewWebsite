@@ -34,7 +34,7 @@ const Banner = () => {
           />
         </h3>
         <p className="text-base tracking-wide text-center md:text-left">
-          Czesc! jestem Olivier, oraz mam 16 lat. W wolnym czasie lubie pograc w gry komputerowe oraz programowac, jednak te programowanie zdobyło moje serce. Programuje od 2021 (3 lata) i nadal sprawia mi to dużo zabawy.
+          Czesc! jestem Dawid, oraz mam 17 lat. W wolnym czasie lubie pograc w gry komputerowe oraz programowac, jednak te programowanie zdobyło moje serce. Programuje od 2021 (3 lata) i nadal sprawia mi to dużo zabawy.
           <div className="top-[2rem] relative">
         <img src="https://discord.c99.nl/widget/theme-4/358595322148290562.png" alt="" />
       </div>

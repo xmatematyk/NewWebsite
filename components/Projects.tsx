@@ -30,16 +30,6 @@ const projects: Project[] = [
     img: Cysk,
     category: "Web",
   },
-  {
-    id: 2,
-    title: "BOT Discord JAJO",
-    len: "discord.py • MongoDB ",
-    des: "BOT dla gildii JAJO to zaawansowane narzędzie z funkcją weryfikacji dla skutecznej kontroli dostępu. Innowacyjny system powitalny tworzy przyjemne przyjęcie dla nowych członków, wzmacniając więzi społeczności. Dodatkowo, bot posiada zautomatyzowany system ticketów, eliminujący opóźnienia w reakcji na pytania i problemy. Funkcje antyraid, antysłowa i antylinki skutecznie zabezpieczają serwer przed niepożądanymi zdarzeniami. Cel to stworzenie kompleksowego i łatwego w obsłudze narzędzia, co sprawia, że bot jest w pełni zautomatyzowany. Niestety, ze względów bezpieczeństwa, kod źródłowy nie jest dostępny publicznie.",
-    linkdc: "https://google.com",
-    linkhub: "https://pornhub.com",
-    img: Jajo,
-    category: "Bot",
-  },
 ];
 
 const Projects = () => {

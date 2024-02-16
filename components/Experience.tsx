@@ -19,8 +19,8 @@ const Experience = () => {
           icon={<SiToptal />}
         />
         <ExperienceCard
-          title="DreamCode.cc"
-          subTitle="WEB Developer 2023 - 2023"
+          title="WentMc.pl"
+          subTitle="WEB & BOT Developer 2023 - 2023"
           icon={<SiFreelancer />}
         />
 

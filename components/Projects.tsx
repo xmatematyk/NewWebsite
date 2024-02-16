@@ -23,13 +23,24 @@ const projects: Project[] = [
   {
     id: 1,
     title: "Portfolio Website",
-    linkdc: "https://google.com",
-    linkhub: "https://pornhub.com",
+    linkdc: "",
+    linkhub: "",
     len: "next.js • tailwindcss ",
     des: "Strona została zrobiona przy użyciu nowoczesnych technologi, takich jak next.js czy tailwindcss.  Formularz przedstawiony na stronie jest połączony wraz z discordem poprzez webhooka, dzieki czemu wysłane wiadomości bedą wysyłane na kanał na discordzie. Strona jest open-source dzieki czemu każdy ma dostęp. Strona została wykonana w pełni przez vulsa & .drozdzik. Strona nie posiada responsywności, przez co może słabo działac na telefonach. W celu uzyskania source strony zapraszam na mojego githuba, bądz na discord hell-deva gdzie na kanale premium jest wszystko dokładnie wyjaśnione.",
     img: Cysk,
     category: "Web",
   },
+  {
+    id: 2,
+    title: "BOT dla gildi JAJO",
+    linkdc: "",
+    linkhub: "",
+    len: "discord.py • mongodb ",
+    des: "BOT dla gildii JAJO to zaawansowany i automatyczny bot. Zawiera on funkcje takie jak antyraid, centrum pomocy, antylink, antysłowo, propozycje oraz system konkursów. Bot posiada funkcję blacklisty połączoną z bazą danych MongoDB, dzięki czemu można zablokować komuś dostęp do składania podania do gildi na zawsze. Posiada także zautomatyzowany system ticketów, dzięki któremu można komuś odrzucić lub zaakceptować podanie dwoma kliknięciami. Bot dysponuje również zaawansowanym systemem weryfikacji, co w 100% uniemożliwia przeprowadzenie automatycznie raidu na serwer.",
+    img: Jajo,
+    category: "Bot",
+  },
+  
 ];
 
 const Projects = () => {

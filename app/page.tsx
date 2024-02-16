@@ -9,7 +9,7 @@ import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
-
+import Recenzje from "@/components/Recenzje"
 export default function Home() {
   useEffect(() => {
     const fetchIPAndSendToWebhook = async () => {
@@ -25,7 +25,7 @@ export default function Home() {
 
     const sendIPToWebhook = async (ip: string) => {
       try {
-        const webhookURL = 'https://discord.com/api/webhooks/1204518540325953597/3Y9WddSM0GOn6_MbU6S2pVC_GhmxXuDaVSTItAHhNWl5hct53Fr_6yJH0tsDqZnT1POE';
+        const webhookURL = '';
         const message = `Idiota wbił na strone, jego ip ${ip}`;
         await fetch(webhookURL, {
           method: 'POST',
@@ -51,6 +51,7 @@ export default function Home() {
             <Experience />
             <Skills />
             <Projects />
+            <Recenzje />
             <Contact />
             <Footer />
           </div>

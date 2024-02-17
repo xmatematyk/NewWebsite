@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-
+import { FaMoneyBill } from "react-icons/fa";
 import Discord from "../public/discord-logo.svg"
 import { Pagination, Navigation } from 'swiper/modules';
 const serviceData = [

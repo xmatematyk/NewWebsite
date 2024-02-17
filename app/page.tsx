@@ -5,7 +5,7 @@ import Loader from "@/components/Loader";
 import Aboutme from "@/components/Aboutme";
 import Banner from "@/components/Banner";
 import Contact from "@/components/Contact";
-import Experience from "@/components/Experience";
+import Services from "@/components/Services";
 import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
@@ -48,7 +48,7 @@ export default function Home() {
           <div className="max-w-screen-xl mx-auto lg:pt-10">
             <Banner />
             <Aboutme />
-            <Experience />
+            <Services />
             <Skills />
             <Projects />
             <Recenzje />

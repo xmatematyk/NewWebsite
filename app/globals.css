@@ -23,10 +23,14 @@
 
 .swiper-button-next::after {
   color: rgb(255, 0, 0) !important;
-  font-size: 24px; 
+  font-size: 24px;
+  
 }
+
 
 
 .swiper-pagination-bullet {
   background-color: rgb(255, 0, 0) !important;
+  margin-top: 50px; 
 }
+

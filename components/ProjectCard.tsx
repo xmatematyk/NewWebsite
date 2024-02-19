@@ -68,7 +68,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="fixed top-0 left-0 w-full h-full bg-black backdrop-blur-md bg-opacity-50 flex items-center justify-center z-50"
+          className="fixed top-0 left-0 w-full h-full  bg-black backdrop-blur-md bg-opacity-50 flex items-center justify-center z-50"
           onClick={closeModal}
         >
           <motion.div
@@ -102,7 +102,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
             <h2 className="text-red-600 font-normal text-base top-[-0.5rem] left-[0.5rem] relative">
               {len} 
             </h2>
-            <h2 className="pl-[0.5rem] top-[-.5rem] relative">
+            <h2 className="pl-[0.5rem]  text-[1rem] top-[-.5rem] relative">
               {des}
             </h2>
             <h1 className="text-white font-bold text-3xl top-[1rem] pl-[0.5rem] md:top-[0.5rem] md:pl-[0.5rem] relative">

@@ -31,11 +31,7 @@
 
 .swiper-pagination-bullet {
   background-color: rgb(255, 0, 0) !important;
-  margin-top: 50px; 
-}
-
-.borderradius {
-  border-radius: 16%;
+  margin-top: 50px !important; 
 }
 
 .active {

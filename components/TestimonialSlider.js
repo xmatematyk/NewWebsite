@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -9,9 +9,8 @@ import { useLanguage } from "./LanguageContext"
 import Kinny from "../public/KinnyZimmer.png"
 import Many from "../public/many.png"
 import Feskyy from "../public/Feskyy.png"
-import SwiperCore, { Navigation, Pagination } from 'swiper';
-
-SwiperCore.use([Navigation, Pagination]);
+import { Navigation } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 
 const texts = {
   en: {
@@ -28,7 +27,7 @@ const texts = {
     about:
       'Świetny bot i znakomita współpraca! Usprawnił nasz serwer Discord oraz ułatwił pracę administratorom. Serdecznie polecam!',
     aboutone:
-      "'Kiedy zaczałem pisac z  cysk-iem, wydawało się, że jest on bardziej introwertyczny. Jednak po zamówieniu przeze mnie strony, całkowicie zmieniłem zdanie. Jest wyrozumiały, cierpliwy i wykonuje wszystko zgodnie z życzeniem klienta. Potrafi również udzielić przydatnych porad, aby było tanio i dobrze. Polecam go serdecznie!",
+      "Kiedy zaczałem pisac z  cysk-iem, wydawało się, że jest on bardziej introwertyczny. Jednak po zamówieniu przeze mnie strony, całkowicie zmieniłem zdanie. Jest wyrozumiały, cierpliwy i wykonuje wszystko zgodnie z życzeniem klienta. Potrafi również udzielić przydatnych porad, aby było tanio i dobrze. Polecam go serdecznie!",
     abouttwo:
       "Cysk dostarczył nam dedykowaną stronę internetową połączoną z botem na platformę Discord. Nie obyło się bez małych komplikacji, lecz Cysk od razu wszystko starał się naprawić i ulepszyć. Jeśli chodzi o wygląd strony, jest ona schludna, ładna oraz przejrzysta. Jeśli chodzi o bota, sprawdził się lepiej niż przypuszczałem - działa bezbłędnie i nie sprawia żadnych problemów. Jestem bardzo zadowolony z usług dostarczonych przez Cyska. Polecam!"
   }
@@ -58,9 +57,14 @@ const TestimonialSlider = () => {
   ];
   return (
     <Swiper
-      navigation
-      pagination={{ clickable: true }}
-      className="h-[400px]"
+      pagination={{
+        clickable: true
+      }}
+      navigation={{
+        clickable: true
+      }}
+      modules={[Navigation, Pagination]}
+      className="md:h-[400px] h-[42rem] "
     >
       {testimonialSliderData.map((person, index) => (
         <SwiperSlide key={index}>
@@ -78,7 +82,8 @@ const TestimonialSlider = () => {
               <div className="mb-4 ">
                 <FaQuoteLeft className="text-4xl xl:text-6xl text-white/20 mx-auto md:mx-0"/>
               </div>
-              <div className="xl:text-lg text-center md:text-left ">{language === 'en' ? person.message : texts.pl.about}</div>
+              <div className="xl:text-lg text-center h-full md:text-left ">{person.message}</div>
+  
             </div>
           </div>
         </SwiperSlide>

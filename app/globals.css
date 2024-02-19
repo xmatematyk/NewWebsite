@@ -34,3 +34,10 @@
   margin-top: 50px; 
 }
 
+.borderradius {
+  border-radius: 16%;
+}
+
+.active {
+  transform: scale(1.2); /* Zwiększa skalę przycisku o 20% */
+}

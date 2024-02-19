@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import Image from "next/image"; 
 import Cysk from "../public/img/projects/image.png";
@@ -7,6 +8,26 @@ import ProjectCard from "./ProjectCard";
 interface ModalState {
   [projectId: number]: boolean;
 }
+
+import { useLanguage } from "./LanguageContext"
+
+interface Texts {
+  name: string;
+  about: string;
+}
+
+const texts: Record<string, Texts> = {
+  en: {
+    name: 'My projects',
+    about:
+      "Olivier (also known as cysk), 16 years old. Currently in the 2nd grade of a technical high school with a focus on programming. Passionate about creating bots for the Discord platform and websites. Enjoys playing games like Valorant, Fortnite, and Minecraft (using BlazingPack). Interested in graphic design, creating logos, and various types of graphics. Noteworthy traits include creativity, dedication to self-improvement, and active involvement in projects."
+  },
+  pl: {
+    name: 'Moje Projekty',
+    about:
+      'Olivier (aka. cysk), 16-lat. Klasa 2 o profilu technik - programista. Pasjonat tworzenia botów na platformę Discord oraz stron internetowych. Gram w gry jak Valorant, Fortnite, Minecraft (BlazingPack). Zainteresowany grafiką, tworzę loga i różnego rodzaju grafiki. Moją cechą wartą uwagi jest przede wszystkim kreatywność jak i zaangażowanie w samorozwój iraz projekty w których biorę udział.'
+  }
+};
 
 interface Project {
   id: number;
@@ -25,8 +46,8 @@ const projects: Project[] = [
     title: "Portfolio Website",
     linkdc: "",
     linkhub: "",
-    len: "next.js • tailwindcss ",
-    des: "Strona została zrobiona przy użyciu nowoczesnych technologi, takich jak next.js czy tailwindcss.  Formularz przedstawiony na stronie jest połączony wraz z discordem poprzez webhooka, dzieki czemu wysłane wiadomości bedą wysyłane na kanał na discordzie. Strona jest open-source dzieki czemu każdy ma dostęp. Strona została wykonana w pełni przez vulsa & .drozdzik. Strona nie posiada responsywności, przez co może słabo działac na telefonach. W celu uzyskania source strony zapraszam na mojego githuba, bądz na discord hell-deva gdzie na kanale premium jest wszystko dokładnie wyjaśnione.",
+    len: "nextjs • tailwindcss ",
+    des: "Strona została zrobiona przy użyciu nowoczesnych technologi, takich jak nextjs czy tailwindcss.  Formularz przedstawiony na stronie jest połączony wraz z discordem poprzez webhooka, dzieki czemu wysłane wiadomości bedą wysyłane na kanał na discordzie. Strona jest open-source dzieki czemu każdy ma dostęp. Strona została wykonana w pełni przez vulsa & .drozdzik. Strona nie posiada responsywności, przez co może słabo działac na telefonach. W celu uzyskania source strony zapraszam na mojego githuba, bądz na discord hell-deva gdzie na kanale premium jest wszystko dokładnie wyjaśnione.",
     img: Cysk,
     category: "Web",
   },
@@ -44,6 +65,7 @@ const projects: Project[] = [
 ];
 
 const Projects = () => {
+  const { language } = useLanguage();
   const [modals, setModals] = useState<ModalState>({});
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -68,7 +90,7 @@ const Projects = () => {
       <div>
         <div className="flex items-center gap-4 text-2xl group pb-8">
           <h3 className="font-semibold relative overflow-hidden">
-            Moje projekty
+          {texts[language].name}
             <span className="w-full h-[2px] absolute bottom-0 left-0 inline-block bg-red-600 -translate-x-[100%] group-hover:translate-x-0 transition-transform duration-300"></span>
           </h3>
           <span className="text-red-600">

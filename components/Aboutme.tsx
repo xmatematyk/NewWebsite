@@ -1,17 +1,34 @@
 import { SiInformatica } from "react-icons/si";
 import Title from "./Title";
+import { useLanguage } from "./LanguageContext"
+
+interface Texts {
+  name: string;
+  about: string;
+}
+
+const texts: Record<string, Texts> = {
+  en: {
+    name: 'About Me',
+    about:
+      "Olivier (also known as cysk), 16 years old. Currently in the 2nd grade of a technical high school with a focus on programming. Passionate about creating bots for the Discord platform and websites. Enjoys playing games like Valorant, Fortnite, and Minecraft (using BlazingPack). Interested in graphic design, creating logos, and various types of graphics. Noteworthy traits include creativity, dedication to self-improvement, and active involvement in projects."
+  },
+  pl: {
+    name: 'O mnie',
+    about:
+      'Olivier (aka. cysk), 16-lat. Klasa 2 o profilu technik - programista. Pasjonat tworzenia botów na platformę Discord oraz stron internetowych. Gram w gry jak Valorant, Fortnite, Minecraft (BlazingPack). Zainteresowany grafiką, tworzę loga i różnego rodzaju grafiki. Moją cechą wartą uwagi jest przede wszystkim kreatywność jak i zaangażowanie w samorozwój iraz projekty w których biorę udział.'
+  }
+};
+
 
 const Aboutme = () => {
+  const { language } = useLanguage();
   return (
     <div className="wrapper">
-      <Title text="O mnie" icon={<SiInformatica />} />
+      <Title text={texts[language].name} icon={<SiInformatica />} />
       <div className="text-lg tracking-wide flex flex-col gap-6">
         <p>
-          Siema! Jestem Olivier (aka. cysk), i mam 16 lat. Jestem na drugim roku technikum o profilu techniczno-programistycznym. 
-          <p></p>Moje główne zainteresowania koncentrują się wokół tworzenia botów na komunikator Discord i tworzenia stron internetowych.
-          Gram również w gry takie jak Valorant, Fortnite czy nawet minecraft, przez całe dziecinstwo grałem w minecraft&aposa na community blazingpack&aposa,
-          przez co jestem dosyc toksyczną osobą. Odkąd poznałem swiat tworzenia botów Discord wciągnałem sie w tworzenie własnych botów, które są  wstanie
-          zautoamtyzowac cały serwer. Od jakiegos czasu uczę się tworzyc grafiki - głownie loga i grafiki dla botów do embeda.
+        {texts[language].about}
         </p>
         
         <p>

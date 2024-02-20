@@ -1,5 +1,4 @@
-"use client"
-import { useState } from 'react';
+
 import { useLanguage, LanguageProvider } from "@/components/LanguageContext"
 import Aboutme from "@/components/Aboutme";
 import Banner from "@/components/Banner";
@@ -10,8 +9,6 @@ import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Recenzje from "@/components/Recenzje";
-import PolandSVG from "@/public/Poland.png";
-import EnSVG from "@/public/En.png";
 import Navbar from '@/components/Navbar';
 export default function Home() {
   return (
@@ -22,8 +19,6 @@ export default function Home() {
 }
 
 function HomeContent() {
-
-
   return (
     <main className="w-full bg-gray-950 text-gray-300 px-4">
       <div className="max-w-screen-xl mx-auto lg:pt-10">

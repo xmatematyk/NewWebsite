@@ -7,13 +7,19 @@ export const useLanguage = () => useContext(LanguageContext);
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState(() => {
-    const storedLanguage = localStorage.getItem('language');
-    return storedLanguage ? storedLanguage : 'pl'; 
+    if (typeof localStorage !== 'undefined') {
+      const storedLanguage = localStorage.getItem('language');
+      return storedLanguage ? storedLanguage : 'pl'; 
+    } else {
+      return 'pl'; // Fallback in case localStorage is not available
+    }
   });
 
   const changeLanguage = (newLanguage) => {
     setLanguage(newLanguage);
-    localStorage.setItem('language', newLanguage); 
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('language', newLanguage); 
+    }
   };
 
   return (

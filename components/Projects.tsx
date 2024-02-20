@@ -86,7 +86,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="wrapper">
+    <div className="wrapper" id="projects">
       <div>
         <div className="flex items-center gap-4 text-2xl group pb-8">
           <h3 className="font-semibold relative overflow-hidden">

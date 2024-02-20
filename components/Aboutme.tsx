@@ -24,9 +24,9 @@ const texts: Record<string, Texts> = {
 const Aboutme = () => {
   const { language } = useLanguage();
   return (
-    <div className="wrapper">
+    <div className="wrapper" id="about">
       <Title text={texts[language].name} icon={<SiInformatica />} />
-      <div className="text-lg tracking-wide flex flex-col gap-6">
+      <div className="text-lg tracking-wide flex flex-col gap-6" >
         <p>
         {texts[language].about}
         </p>

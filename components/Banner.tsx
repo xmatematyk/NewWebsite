@@ -39,11 +39,11 @@ const texts: Record<string, Texts> = {
 const Banner = () => {
   const { language } = useLanguage();
   return (
-    <div className="wrapper flex flex-col md:flex-row items-center gap-10">
+    <div className="wrapper flex flex-col md:flex-row items-center gap-10" id="home">
       {/* Image */}
       <div className="w-44 h-44 md:top-[-1.5rem] relative rounded-full bg-black">
         <Image
-          className="w-full h-full rounded-full  border-[1px] border-red-600 p-2 object-cover"
+          className="w-full h-full rounded-full z-[1] border-[1px] border-red-600 p-2 object-cover"
           src={ProfileIMG}
           alt="ProfileImg"
         />

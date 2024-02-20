@@ -44,8 +44,8 @@ const Recenzje = () => {
   const { language } = useLanguage();
   return (
     <div className="text-center ">
-        <div className="container mx-auto h-full py-32 flex flex-col justify-center">
-            <h2 className='h2 mb-8 xl:mb-0'>
+        <div className="container mx-auto h-full py-32 flex flex-col justify-center"  id="services">
+            <h2 className='h2 mb-8 xl:mb-0 ' >
             <Title text={texts[language].name} icon={<FaMoneyBill  />}  />
             </h2>
             <div className="">

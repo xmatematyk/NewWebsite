@@ -1,13 +1,19 @@
-"use client"
-import React, { createContext, useContext, useState } from 'react';
+// LanguageContext.js
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
 const LanguageContext = createContext();
 
-export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState('en');
+export const useLanguage = () => useContext(LanguageContext);
 
-  const changeLanguage = () => {
-    setLanguage(prevLanguage => (prevLanguage === 'en' ? 'pl' : 'en'));
+export const LanguageProvider = ({ children }) => {
+  const [language, setLanguage] = useState(() => {
+    const storedLanguage = localStorage.getItem('language');
+    return storedLanguage ? storedLanguage : 'pl'; 
+  });
+
+  const changeLanguage = (newLanguage) => {
+    setLanguage(newLanguage);
+    localStorage.setItem('language', newLanguage); 
   };
 
   return (
@@ -15,8 +21,4 @@ export const LanguageProvider = ({ children }) => {
       {children}
     </LanguageContext.Provider>
   );
-};
-
-export const useLanguage = () => {
-  return useContext(LanguageContext);
 };

@@ -35,8 +35,8 @@ const texts: Record<string, Texts> = {
 const Recenzje = () => {
   const { language } = useLanguage();
   return (
-    <div className="text-center ">
-        <div className="container mx-auto h-full py-32 flex flex-col justify-center">
+    <div className="text-center " id="reviews">
+        <div className="container h-[50rem] mx-auto  py-16 flex flex-col justify-center">
             <h2 className='h2 mb-8 xl:mb-0'>
             <Title text={texts[language].name} icon={<FaSearch />}  />
             </h2>
@@ -44,7 +44,7 @@ const Recenzje = () => {
                 <TestimonialSlider /> 
             </div>
         </div>
-        <div className="wrapper"></div>
+       
     </div>
     
   )

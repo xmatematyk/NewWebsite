@@ -31,9 +31,81 @@
 
 .swiper-pagination-bullet {
   background-color: rgb(255, 0, 0) !important;
-  margin-top: 50px !important; 
+  --swiper-pagination-top: -100px !important;
+  position: relative !important;
 }
+
 
 .active {
   transform: scale(1.2); /* Zwiększa skalę przycisku o 20% */
+}
+
+@keyframes slideIn {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(20px); /* Przesunięcie w prawo */
+  }
+  50% {
+    transform: translateX(-20px); /* Przesunięcie w lewo */
+  }
+  75% {
+    transform: translateX(20px); /* Z powrotem w prawo */
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes progressBarAnimation {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.progressBar {
+  position: absolute;
+  bottom: 0rem;
+  left: 0;
+  height: 5px;
+  background-color: #00df9a; /* Kolor paska postępu */
+  animation: progressBarAnimation 5s linear forwards; /* Animacja paska postępu */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999 !important;
+  transition: top 0.3s;
+  backdrop-filter: blur(10px); /* Efekt rozmycia */
+  background-color: rgba(0, 0, 0, 0.192); /* Czarne tło z przezroczystością */
+}
+
+@media (max-width: 768px) {
+  .full-height-nav {
+    height: 100vh; /* Pełna wysokość na mniejszych ekranach */
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* szerokość paska przewijania */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #030712; /* kolor tła paska przewijania */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff0000; /* kolor samego paska przewijania */
+  border-radius: 5px; /* zaokrąglenie rogów paska przewijania */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff0000; /* kolor paska przewijania po najechaniu myszką */
 }

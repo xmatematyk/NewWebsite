@@ -24,7 +24,7 @@ const texts: Record<string, Texts> = {
 const Skills = () => {
   const { language } = useLanguage();
   return (
-    <div className="wrapper">
+    <div className="wrapper" id="skills">
       <Title text={texts[language].name} icon={<GiSkills />} />
       <div className="flex gap-4 flex-wrap">
         <SkillsInput

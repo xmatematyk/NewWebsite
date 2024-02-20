@@ -1,4 +1,5 @@
-
+"use client"
+import { useState } from 'react';
 import { useLanguage, LanguageProvider } from "@/components/LanguageContext"
 import Aboutme from "@/components/Aboutme";
 import Banner from "@/components/Banner";

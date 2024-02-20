@@ -29,7 +29,7 @@ interface Texts {
       name3: 'Security',
       name4: 'Apss/Programs',
       about:
-        "I create fast, automated Discord bots, improving server management and user interaction. My solutions are precisely tailored to the clients needs, ensuring efficient server organization. - This is also a thesis.",
+        "I create fast, automated Discord bots, improving server management and user interaction. My solutions are precisely tailored to the clients needs, ensuring efficient server organization.",
       aboutone:
         "When creating websites, I prioritize their aesthetics and intuitive navigation while maintaining full functionality. Additionally, I possess skills in integrating websites with consoles via RCON, contributing to the comprehensive quality of projects. ",
       abouttwo:

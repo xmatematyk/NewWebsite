@@ -46,7 +46,7 @@ const Contact = () => {
         <SocialLink title="Youtube" link="https://www.youtube.com/@cyskofficial_" />
         <SocialLink
           title="Discord"
-          link="https://discord.com/users/551123399834075137"
+          link="https://discord.com/users/358595322148290562"
         />
       </div>
     </div>

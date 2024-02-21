@@ -138,3 +138,19 @@
 .button:hover::before {
   left: 100%;
 }
+
+.text-responsive {
+  font-size: 20px; /* Default font size */
+}
+
+@media (max-width: 768px) {
+  .text-responsive {
+      font-size: 18px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .text-responsive {
+      font-size: 16px; /* Adjust font size for even smaller screens */
+  }
+}

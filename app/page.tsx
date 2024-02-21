@@ -8,7 +8,6 @@ import Services from "@/components/Services";
 import Image from "next/image"
 import Footer from "@/components/Footer";
 import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
 import Recenzje from "@/components/Recenzje";
 import Navbar from '@/components/Navbar';
 export default function Home() {

@@ -32,14 +32,11 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
   }, [title]);
 
   useEffect(() => {
-    // Zablokowanie przewijania strony, gdy modal jest otwarty
     if (isModalOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
     }
-
-    // Wyczyszczenie stylu przewijania, gdy komponent zostanie odmontowany
     return () => {
       document.body.style.overflow = 'unset';
     };

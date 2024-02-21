@@ -36,9 +36,9 @@ const texts: Record<string, Texts> = {
 const Recenzje = () => {
   const { language } = useLanguage();
   return (
-    <div className="text-center " id="reviews">
-        <div className="container h-[50rem] mx-auto  py-16 flex flex-col justify-center">
-            <h2 className='h2 mb-8 xl:mb-0'>
+    <div className="text-center   " id="reviews">
+        <div className="container  mx-auto  py-10 flex flex-col justify-center">
+            <h2 className='h2 top-[5rem]  relative mb-0 xl:mb-0'>
             <Title text={texts[language].name} icon={<FaSearch />}  />
             </h2>
             <div className="">

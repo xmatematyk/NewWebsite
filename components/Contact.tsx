@@ -31,7 +31,7 @@ const Contact = () => {
   return (
     <div className="wrapper">
       <div className="max-w-5xl mx-auto flex flex-col gap-4 items-center justify-center">
-        <h2 className="text-2xl font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-red-300 to-red-600">{texts[language].name}</h2>
+        <h2 className="text-2xl font-bold bg-clip-text text-center text-transparent  bg-gradient-to-r from-red-300 to-red-600">{texts[language].name}</h2>
         <p className="text-lg tracking-wide font-medium text-center">
         {texts[language].about}
         </p>

@@ -33,7 +33,7 @@
   background-color: rgb(255, 0, 0) !important;
   --swiper-pagination-top: -100px !important;
   position: relative !important;
-  top: -1rem;
+  top: -2rem;
 }
 
 
@@ -145,7 +145,7 @@
 
 @media (max-width: 768px) {
   .text-responsive {
-      font-size: 18px; /* Adjust font size for smaller screens */
+      font-size: 16px; /* Adjust font size for smaller screens */
   }
 }
 

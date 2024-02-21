@@ -107,7 +107,7 @@ const ServiceSlider = () => {
                 clickable: true,
               }}
               modules={[Pagination, Navigation]}
-                  className="md:h-[400px] h-[400px] "
+                  className="md:h-[400px] h-[350px] "
               
         >
             {serviceData.map((item, index) => {

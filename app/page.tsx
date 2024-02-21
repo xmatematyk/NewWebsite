@@ -26,7 +26,6 @@ function HomeContent() {
         <Navbar />
         <Banner />
         <Services />
-        <Skills />
         <Projects />
         <Recenzje />
         <Contact />

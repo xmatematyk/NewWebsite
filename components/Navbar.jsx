@@ -171,9 +171,6 @@ export default function NavBar() {
                             <li className="text-white hover:text-red-500 transition-all duration-500">
                             <Link to="services" smooth={true} duration={700}>{texts[language].services}</Link>
                             </li>
-                            <li className="text-white hover:text-red-500 transition-all duration-500">
-                            <Link to="skills" smooth={true} duration={700}>{texts[language].skills}</Link>
-                            </li>
                             <li className="text-white hover:text-red-500 cursor-pointer transition-all duration-500">
                             <Link to="projects" smooth={true} duration={700}>{texts[language].projects}</Link>
                             </li>

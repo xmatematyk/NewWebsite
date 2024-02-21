@@ -92,7 +92,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
             </div>
               </div>
             </div>
-            <h1 className="text-white  font-bold  p-1 relative text-[2rem]  ">
+            <h1 className="text-white  font-bold  p-2 relative md:text-[2rem] text-2xl ">
               {title}
               <div className="">
               <div className="wrapper absolute top-[-8.3rem] md:w-[25rem] left-[18rem]"></div></div>

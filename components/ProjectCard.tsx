@@ -87,7 +87,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
                   src={img.src}
                   alt="Feskyy"
                 />
-                <div className="absolute top-4 right-4 cursor-pointer text-white" onClick={closeModal}>
+                <div className="absolute top-4 right-4  hover:bg-black  rounded-lg cursor-pointer text-white" onClick={closeModal}>
               <MdClose size={24} />
             </div>
               </div>

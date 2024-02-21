@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image"; 
 import Cysk from "../public/img/projects/image.png";
 import Jajo from "../public/img/projects/Jajo.png";
+import mc from "../public/mcfox.png"
 import ProjectCard from "./ProjectCard";
 
 interface ModalState {
@@ -59,6 +60,16 @@ const projects: Project[] = [
     len: "discord.py • mongodb ",
     des: "BOT dla gildii JAJO to zaawansowany i automatyczny bot. Zawiera on funkcje takie jak antyraid, centrum pomocy, antylink, antysłowo, propozycje oraz system konkursów. Bot posiada funkcję blacklisty połączoną z bazą danych MongoDB, dzięki czemu można zablokować komuś dostęp do składania podania do gildi na zawsze. Posiada także zautomatyzowany system ticketów, dzięki któremu można komuś odrzucić lub zaakceptować podanie dwoma kliknięciami. Bot dysponuje również zaawansowanym systemem weryfikacji, co w 100% uniemożliwia przeprowadzenie automatycznie raidu na serwer.",
     img: Jajo,
+    category: "Bot",
+  },
+  {
+    id: 3,
+    title: "BOT dla McFox.pl",
+    linkdc: "",
+    linkhub: "",
+    len: "discord.py • MongoDB • RCON  ",
+    des: "Stworzyłem bota dla serwera McFox.pl, którego zadaniem jest monitorowanie chatu i nagradzanie graczy, którzy podają swój nick, przyznając im 1 klucz Foxa. Wykorzystałem bazę danych MongoDB do przechowywania nicków, zapobiegając powtórnym nagrodom dla tych samych nicków oraz zabezpieczając przed wykorzystaniem jednego konta Discord do podawania sobie nagród na różne nicki. Dodatkowo, bot posiada podstawowe funkcje bezpieczeństwa, uniemożliwiające graczom oszukiwanie. Dodatkowo, bota wyposażono w system wykrywania nowych kont na Discordzie, co skutecznie eliminuje możliwość odebrania nagrody przez potencjalne fałszywe konta, co zwiększa bezpieczeństwo i uczciwość procesu nagradzania graczy.",
+    img: mc,
     category: "Bot",
   },
   

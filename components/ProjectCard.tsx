@@ -65,7 +65,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="fixed top-[3rem] left-0 w-full h-full  bg-black backdrop-blur-md bg-opacity-50 flex items-center justify-center z-50"
+          className="fixed top-[3rem] left-0 w-full px-10 py-10 h-full  bg-black backdrop-blur-md bg-opacity-50 flex items-center justify-center z-50"
           onClick={closeModal}
         >
           <motion.div
@@ -73,7 +73,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.5 }}
-            className="p-4 rounded-lg w-[50rem] h-[50rem] overflow-auto"
+            className="p-4 rounded-lg w-[50rem] h-full px-10 md:h-[50rem] overflow-auto"
             onClick={(e) => e.stopPropagation()} 
           >
             
@@ -95,7 +95,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
             <h1 className="text-white font-bold text-3xl p-2 relative">
               {title}
               <div className="">
-              <div className="wrapper absolute top-[-8.3rem] md:w-[30rem] left-[18rem]"></div></div>
+              <div className="wrapper absolute top-[-8.3rem] md:w-[25rem] left-[18rem]"></div></div>
             </h1>
             <h2 className="text-red-600 font-normal text-base top-[-0.5rem] left-[0.5rem] relative">
               {len} 
@@ -103,9 +103,9 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
             <h2 className="pl-[0.5rem]  text-[1rem] top-[-.5rem] relative">
               {des}
             </h2>
-            <h1 className="text-white font-bold text-3xl top-[1rem] pl-[0.5rem] md:top-[0.5rem] md:pl-[0.5rem] relative">
+            <h1 className="text-white  font-bold text-3xl top-[1rem] pl-[0.5rem] md:top-[0.5rem] h-auto  pl-[0.5rem] relative">
               Linki
-              <div className="wrapper top-[-8.8rem] md:w-[40rem]  left-[6rem] absolute"></div>
+              <div className="wrapper top-[-8.8rem]  md:w-[40rem]  left-[6rem] absolute"></div>
               <h2 className="text-red-600 font-normal text-base md:top-[0.5rem]  relative">
                 <a href={linkhub}>Github</a> • <a href={linkdc}>My Discord</a>
               </h2>

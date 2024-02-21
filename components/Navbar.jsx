@@ -180,9 +180,9 @@ export default function NavBar() {
                             <li className="text-white hover:text-red-500 transition-all duration-500">
                             <Link to="reviews" smooth={true} duration={700}>{texts[language].reviews}</Link>
                             </li>
-                            <div className="flex relative md:left-[30rem] sm:text-center  hover:text-orange-500">
-                                <div className={`flex w-[3rem] h-[3rem] mr-5 rounded-lg overflow-hidden ${activeLanguage === 'pl' ? 'active transition-all duration-300' : ''}`} >
-                                    <button className="p-0 bg-transparent hover:active border-none"  onClick={handlePolishLanguageChange} >
+                            <div className="flex relative md:left-[30rem]  sm:text-center  hover:text-orange-500">
+                                <div className={`flex w-[3rem] h-[3rem]  mr-5 rounded-lg overflow-hidden ${activeLanguage === 'pl' ? 'active transition-all duration-300' : ''}`} >
+                                    <button className="p-0 bg-transparent  hover:active border-none"  onClick={handlePolishLanguageChange} >
                                     <Image src={PolandSVG} alt="" className="w-[3rem] rounded-full h-[2rem]" onClick={() => {
                                         handlePanelClick(); 
                                     }}  />

@@ -100,7 +100,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
             <h2 className="text-red-600 text-responsive  font-normal text-base top-[-0.5rem] left-[0.5rem] relative text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
               {len} 
             </h2>
-            <h2 className="pl-[0.5rem] text-responsive   text-[1rem] top-[-.5rem] relative text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
+            <h2 className="pl-[0.5rem] text-responsive   text-[1rem] top-[-.5rem] relative text-xs sm:text-sm md:text-base lg:text-lg xl:text-sm">
               {des}
             </h2>
             <h1 className="text-white  font-bold text-3xl top-[1rem] pl-[0.5rem] md:top-[0.5rem] h-auto  pl-[0.5rem] relative">

@@ -51,7 +51,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
         onMouseLeave={() => setIsHovered(false)}
       >
         <NextImage
-          className={"object-fill h-[15rem] translate-y-0 transition-transform duration-[3s] z-i"}
+          className={"object-cover  w-full h-[15rem] translate-y-0 transition-transform duration-[3s] z-i"}
           width={500}
           height={350}
           src={img.src} 
@@ -65,7 +65,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="fixed top-0 left-0 w-full h-full  bg-black backdrop-blur-md bg-opacity-50 flex items-center justify-center z-50"
+          className="fixed top-[2rem] left-0 w-full h-full  bg-black backdrop-blur-md bg-opacity-50 flex items-center justify-center z-50"
           onClick={closeModal}
         >
           <motion.div
@@ -87,14 +87,14 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
                   src={img.src}
                   alt="Feskyy"
                 />
-                <div className="absolute top-4 right-4  hover:bg-black  rounded-lg cursor-pointer text-white" onClick={closeModal}>
+                <div className="absolute top-4 right-4  hover:bg-gray-500 bg-gray-400  rounded-lg cursor-pointer text-white" onClick={closeModal}>
               <MdClose size={24} />
             </div>
               </div>
             </div>
             <h1 className="text-white font-bold text-3xl p-2 relative">
               {title}
-              <div className="wrapper absolute top-[-8.3rem] w-3/5 left-[19rem]"></div>
+              <div className="wrapper absolute top-[-8.3rem] w-3/5 left-[17rem]"></div>
             </h1>
             <h2 className="text-red-600 font-normal text-base top-[-0.5rem] left-[0.5rem] relative">
               {len} 

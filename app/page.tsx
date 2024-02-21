@@ -25,7 +25,6 @@ function HomeContent() {
       <div className="max-w-screen-xl mx-auto lg:pt-10">
         <Navbar />
         <Banner />
-        <Aboutme />
         <Services />
         <Skills />
         <Projects />

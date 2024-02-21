@@ -108,7 +108,7 @@ export default function NavBar() {
     return (
         
         <nav className="w-full navbar bg-gray-950 shadow  ">
-            <div className="justify-between px-8 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+            <div className="justify-between px-8 mx-auto  lg:max-w-7xl md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block"> 
                         <a href="">
@@ -161,7 +161,7 @@ export default function NavBar() {
                         
                     >
                         
-                        <ul className="items-center justify-center  cursor-pointer space-y-8 md:flex md:space-x-6 md:left-[-14rem] relative md:space-y-0 full-width-ul">
+                        <ul className="items-center text-center justify-end  cursor-pointer space-y-8 md:flex md:space-x-6 md:left-[-14rem] relative md:space-y-0 ">
                             <li className="text-white hover:text-red-500 transition-all duration-500 ">
                             <Link to="home" smooth={true} duration={700}>{texts[language].home}</Link>
                             </li>

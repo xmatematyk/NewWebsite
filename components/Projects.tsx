@@ -5,7 +5,7 @@ import Cysk from "../public/img/projects/image.png";
 import Jajo from "../public/img/projects/Jajo.png";
 import mc from "../public/mcfox.png"
 import ProjectCard from "./ProjectCard";
-
+import ProjectNow from "../public/portfolio.png"
 interface ModalState {
   [projectId: number]: boolean;
 }
@@ -43,16 +43,6 @@ interface Project {
 
 const projects: Project[] = [
   {
-    id: 1,
-    title: "Portfolio Website",
-    linkdc: "",
-    linkhub: "",
-    len: "nextjs • tailwindcss ",
-    des: "Strona została zrobiona przy użyciu nowoczesnych technologi, takich jak nextjs czy tailwindcss.  Formularz przedstawiony na stronie jest połączony wraz z discordem poprzez webhooka, dzieki czemu wysłane wiadomości bedą wysyłane na kanał na discordzie. Strona jest open-source dzieki czemu każdy ma dostęp. Strona została wykonana w pełni przez vulsa & .drozdzik. Strona nie posiada responsywności, przez co może słabo działac na telefonach. W celu uzyskania source strony zapraszam na mojego githuba, bądz na discord hell-deva gdzie na kanale premium jest wszystko dokładnie wyjaśnione.",
-    img: Cysk,
-    category: "Web",
-  },
-  {
     id: 2,
     title: "BOT dla gildi JAJO",
     linkdc: "",
@@ -71,6 +61,16 @@ const projects: Project[] = [
     des: "Stworzyłem bota dla serwera McFox.pl, którego zadaniem jest monitorowanie chatu i nagradzanie graczy, którzy podają swój nick, przyznając im 1 klucz Foxa. Wykorzystałem bazę danych MongoDB do przechowywania nicków, zapobiegając powtórnym nagrodom dla tych samych nicków oraz zabezpieczając przed wykorzystaniem jednego konta Discord do podawania sobie nagród na różne nicki. Dodatkowo, bot posiada podstawowe funkcje bezpieczeństwa, uniemożliwiające graczom oszukiwanie. Dodatkowo, bota wyposażono w system wykrywania nowych kont na Discordzie, co skutecznie eliminuje możliwość odebrania nagrody przez potencjalne fałszywe konta, co zwiększa bezpieczeństwo i uczciwość procesu nagradzania graczy.",
     img: mc,
     category: "Bot",
+  },
+  {
+    id: 4,
+    title: "Current website",
+    linkdc: "",
+    linkhub: "",
+    len: "nextjs • tailwindcss • typescript ",
+    des: "Jest to strona, na której się obecnie znajdujesz, stworzona przy użyciu frameworku JavaScript o nazwie Next.js oraz biblioteki CSS o nazwie Tailwind CSS. Kombinacja tych technologii pozwoliła mi na efektywne tworzenie responsywnego i atrakcyjnego interfejsu użytkownika. Dzięki zastosowaniu Next.js, strona ta charakteryzuje się szybkim czasem ładowania i wydajnością, co przyczynia się do lepszej jakości doświadczenia użytkownika. Dodatkowo, Tailwind CSS umożliwił mi szybkie tworzenie stylów, co przyspieszyło proces projektowania. Struktura oparta na komponentach w Next.js ułatwia skalowanie i zarządzanie zawartością witryny. Całość projektu jest łatwa do utrzymania i rozwijania, co przyczynia się do jego trwałej funkcjonalności.",
+    img: ProjectNow,
+    category: "Web",
   },
   
 ];

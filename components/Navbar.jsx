@@ -221,7 +221,7 @@ export default function NavBar() {
             </div>
             {/* Overlay z rozmytym tłem */}
         {navbar && window.innerWidth <= 768 && (
-    <div className="fixed  left-0 w-screen  backdrop-filter backdrop-blur-md z-50"></div>
+    <div className="fixed  left-0 w-screen   backdrop-filter backdrop-blur-md z-50"></div>
     )}
 
             </nav>

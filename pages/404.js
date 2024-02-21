@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import './404.css';
-
+import Navbar from '@/components/Navbar';
 const NotFound = () => {
   const router = useRouter();
 
@@ -18,17 +18,19 @@ const NotFound = () => {
   return (
     <>
       <Head>
-        <title>404 HTML Template by Colorlib</title>
+        <title>Nie znaleziono strony</title>
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="noindex, follow" />
-
+        
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
       </Head>
 
       <div id="notfound" className="relative h-screen">
+        
         <div className="notfound absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-520 w-full text-center">
+          
           <div className="notfound-404 relative h-240">
             <h1 className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 font-montserrat font-bold text-9xl text-gray-700 uppercase tracking-wide leading-none m-0">
               <span className="text-shadow-8px-0-0 text-gray">4</span>

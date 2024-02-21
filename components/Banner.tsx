@@ -19,7 +19,7 @@ const texts: Record<string, Texts> = {
       'Python Developer'
     ],
     about:
-      "Hi there! I'm Olivier, and I'm 16 years old. In my free time, I enjoy playing computer games and programming, although programming has really captured my heart. I've been programming since 2021 (3 years), and it still brings me a lot of joy."
+      "Hi there! I'm Olivier, and I'm 16 years old. In my free time, I enjoy playing computer games and programming, although programming has really captured my heart. I've been programming since 2022 (2 years), and it still brings me a lot of joy."
   },
   pl: {
     name: 'cysk',
@@ -30,7 +30,7 @@ const texts: Record<string, Texts> = {
       'Python Developer'
     ],
     about:
-      'Cześć! Jestem Olivier, mam 16 lat. W wolnym czasie lubię grać w gry komputerowe i programować, choć programowanie naprawdę mnie urzekło. Programuję od 2021 roku (3 lata) i nadal sprawia mi to dużo radości.'
+      'Cześć! Jestem Olivier, mam 16 lat. W wolnym czasie lubię grać w gry komputerowe i programować, choć programowanie naprawdę mnie urzekło. Programuję od 2022 roku (2 lata) i nadal sprawia mi to dużo radości.'
   }
 };
 

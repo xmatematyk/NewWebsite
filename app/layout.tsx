@@ -4,9 +4,8 @@ import Cysk from "./cysklogo.png"
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "olus | OFFICIAL PAGE",
+  title: "olus | Official Page",
   description: "Cześć! Jestem Olivier, mam 16 lat. W wolnym czasie lubię grać w gry komputerowe i programować, choć programowanie naprawdę mnie urzekło. Programuję od 2021 roku (3 lata) i nadal sprawia mi to dużo radości.",
-  Image: Cysk,
 };
 
 export default function RootLayout({

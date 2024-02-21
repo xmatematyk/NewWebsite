@@ -28,10 +28,10 @@ const Recenzje = () => {
   return (
     <div className="text-center   " id="reviews">
         <div className="container  mx-auto  py-10 flex flex-col justify-center">
-            <h2 className='h2 top-[5rem]  relative mb-0 xl:mb-0'>
+            <h2 className='h2 md:top-[5rem]  relative mb-0 xl:mb-0'>
             <Title text={texts[language].name} icon={<FaSearch />}  />
             </h2>
-            <div className="">
+            <div className="relative top-[5rem]">
                 <TestimonialSlider /> 
             </div>
         </div>

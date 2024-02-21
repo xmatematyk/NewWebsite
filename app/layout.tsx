@@ -1,12 +1,12 @@
 import "./globals.css";
 import { Montserrat } from "next/font/google";
-
+import Cysk from "./cysklogo.png"
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "cysk | Front-END Developer",
+  title: "olus | Official page",
   description: "Siema",
-  
+  Image: Cysk,
 };
 
 export default function RootLayout({

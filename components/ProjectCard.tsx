@@ -78,10 +78,10 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
           >
             
             <div className="h-50 border-[1px] border-red-600 overflow-hidden relative rounded-lg group">
-              <div className="relative h-[25rem] w-full overflow-hidden border-[1px] border-red-600 rounded-lg">
+              <div className="relative md:h-[25rem] h-[10rem] w-full overflow-hidden border-[1px] border-red-600 rounded-lg">
                 
                 <NextImage
-                  className="object-fill h-[30rem] translate-y-0 transition-transform duration-[3s] z-i"
+                  className="object-fill md:h-[30rem]  translate-y-0 transition-transform duration-[3s] z-i"
                   width={800}
                   height={478}
                   src={img.src}
@@ -92,7 +92,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
             </div>
               </div>
             </div>
-            <h1 className="text-white  font-bold text-3xl p-2 relative text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+            <h1 className="text-white  font-bold  p-1 relative text-[2rem]  ">
               {title}
               <div className="">
               <div className="wrapper absolute top-[-8.3rem] md:w-[25rem] left-[18rem]"></div></div>

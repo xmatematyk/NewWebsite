@@ -73,7 +73,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.5 }}
-            className="p-4 rounded-lg w-[50rem] h-[60rem] px-10 py-5  overflow-auto"
+            className="p-4 rounded-lg w-[50rem] h-[90rem] px-10 py-5  overflow-auto"
             onClick={(e) => e.stopPropagation()} 
           >
             
@@ -92,15 +92,15 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
             </div>
               </div>
             </div>
-            <h1 className="text-white  font-bold text-3xl p-2 relative">
+            <h1 className="text-white  font-bold text-3xl p-2 relative text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
               {title}
               <div className="">
               <div className="wrapper absolute top-[-8.3rem] md:w-[25rem] left-[18rem]"></div></div>
             </h1>
-            <h2 className="text-red-600 text-responsive  font-normal text-base top-[-0.5rem] left-[0.5rem] relative">
+            <h2 className="text-red-600 text-responsive  font-normal text-base top-[-0.5rem] left-[0.5rem] relative text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
               {len} 
             </h2>
-            <h2 className="pl-[0.5rem] text-responsive   text-[1rem] top-[-.5rem] relative">
+            <h2 className="pl-[0.5rem] text-responsive   text-[1rem] top-[-.5rem] relative text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
               {des}
             </h2>
             <h1 className="text-white  font-bold text-3xl top-[1rem] pl-[0.5rem] md:top-[0.5rem] h-auto  pl-[0.5rem] relative">

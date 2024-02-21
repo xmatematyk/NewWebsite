@@ -65,7 +65,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="fixed top-[3rem] left-0 w-full text-auto text-responsive  px-1 py-10 bg-black backdrop-blur-md bg-opacity-50 flex items-center justify-center z-50"
+          className="fixed top-[3rem] left-0  w-full text-auto text-responsive  px-1 py-10 bg-black backdrop-blur-md bg-opacity-50 flex items-center justify-center z-50"
           onClick={closeModal}
         >
           <motion.div
@@ -73,7 +73,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.5 }}
-            className="p-4 rounded-lg w-[50rem] h-[90rem] px-10 py-5  overflow-auto"
+            className="p-4 rounded-lg w-[50rem] max-w-screen-xl mx-auto lg:pt-10 h-[90rem] px-10 py-5  overflow-auto"
             onClick={(e) => e.stopPropagation()} 
           >
             
@@ -100,7 +100,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
             <h2 className="text-red-600 text-responsive  font-normal text-base top-[-0.5rem] left-[0.5rem] relative  py-1 text-xl ">
               {len} 
             </h2>
-            <h2 className="pl-[0.5rem] text-responsive   md:text-[1rem] top-[-.5rem] relative  text-xs">
+            <h2 className="pl-[0.5rem]   md:text-[1rem] top-[-.5rem] relative  text-xs">
               {des}
             </h2>
             <h1 className="text-white  font-bold text-3xl top-[1rem] pl-[0.5rem] md:top-[0.5rem] h-auto  pl-[0.5rem] relative">

@@ -65,7 +65,7 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="fixed top-[3rem] left-0 w-full px-3 py-10 bg-black backdrop-blur-md bg-opacity-50 flex items-center justify-center z-50"
+          className="fixed top-[3rem] left-0 w-full px-1 py-10 bg-black backdrop-blur-md bg-opacity-50 flex items-center justify-center z-50"
           onClick={closeModal}
         >
           <motion.div

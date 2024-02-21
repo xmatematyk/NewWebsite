@@ -69,10 +69,10 @@ const TestimonialSlider = () => {
         }}
 
       navigation={{
-        clickable: true
+        clickable: true,
       }}
       modules={[Navigation, Pagination, Autoplay]}
-      className="h-[650px] md:top-[2rem] relative"
+      className="md:h-[400px] h-[450px] "
     >
       {testimonialSliderData.map((person, index) => (
         <SwiperSlide key={index}>

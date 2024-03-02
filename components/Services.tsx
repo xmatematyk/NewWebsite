@@ -44,11 +44,11 @@ const Recenzje = () => {
   const { language } = useLanguage();
   return (
     <div className="text-center ">
-        <div className="container mx-auto h-full py-32 flex flex-col justify-center"  id="services">
-            <h2 className='h2 mb-8 xl:mb-0 ' >
+        <div className="container mx-auto h-full  flex flex-col justify-center"  id="services">
+            <h2 className='h2 mb-8 xl:mb-[60px] py-12 ' >
             <Title text={texts[language].name} icon={<FaMoneyBill  />}  />
             </h2>
-            <div className="">
+            <div className="xl:top-[0rem] xl:relative">
                 <Slider /> 
             </div>
         </div>

@@ -6,6 +6,7 @@ import Jajo from "../public/img/projects/Jajo.png";
 import mc from "../public/mcfox.png"
 import ProjectCard from "./ProjectCard";
 import ProjectNow from "../public/portfolio.png"
+import Template from "@/public/template1.png"
 interface ModalState {
   [projectId: number]: boolean;
 }
@@ -70,6 +71,16 @@ const projects: Project[] = [
     len: "nextjs • tailwindcss • typescript ",
     des: "Jest to strona, na której się obecnie znajdujesz, stworzona przy użyciu frameworku JavaScript o nazwie Next.js oraz biblioteki CSS o nazwie Tailwind CSS. Kombinacja tych technologii pozwoliła mi na efektywne tworzenie responsywnego i atrakcyjnego interfejsu użytkownika. Dzięki zastosowaniu Next.js, strona ta charakteryzuje się szybkim czasem ładowania i wydajnością, co przyczynia się do lepszej jakości doświadczenia użytkownika. Dodatkowo, Tailwind CSS umożliwił mi szybkie tworzenie stylów, co przyspieszyło proces projektowania. Struktura oparta na komponentach w Next.js ułatwia skalowanie i zarządzanie zawartością witryny. Całość projektu jest łatwa do utrzymania i rozwijania, co przyczynia się do jego trwałej funkcjonalności.",
     img: ProjectNow,
+    category: "Web",
+  },
+  {
+    id: 5,
+    title: "minecraft website",
+    linkdc: "",
+    linkhub: "",
+    len: "HTML • CSS • JavaScript ",
+    des: "Strona jest strikte pod serwery Minecraft i posiada prosty licznik osób online na danym serwerze. Możliwość pełnej personalizacji jest gwarantowana, a co więcej, jest to projekt open-source, co oznacza, że każdy może skopiować kod i dostosować go do swoich potrzeb. To idealne rozwiązanie dla społeczności Minecraft, umożliwiające łatwą integrację z serwerami oraz dostosowanie wyglądu strony do własnych upodobań. Dzięki tej stronie administratorzy serwerów mogą śledzić aktywność graczy w czasie rzeczywistym, co pozwala im lepiej zarządzać społecznością i dostosowywać zasoby serwera do obecnych potrzeb. Dodatkowo, otwarty kod sprawia, że projekt może stale się rozwijać dzięki wkładowi społeczności deweloperów i entuzjastów Minecrafta. Ta innowacyjna platforma stanowi przykład synergii pomiędzy graczami i programistami, umożliwiając każdemu uczestnictwo w tworzeniu lepszych doświadczeń w świecie Minecrafta.",
+    img: Template,
     category: "Web",
   },
   

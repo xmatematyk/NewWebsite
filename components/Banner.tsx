@@ -3,6 +3,7 @@ import Image from "next/image";
 import Typewriter from "typewriter-effect";
 import ProfileIMG from "@/public/img/profileImg.jpg"
 import { useLanguage } from "./LanguageContext"
+import Avatar from "@/public/avatarr.png"
 interface Texts {
   name: string;
   titles: string[];
@@ -11,7 +12,7 @@ interface Texts {
 
 const texts: Record<string, Texts> = {
   en: {
-    name: 'cysk',
+    name: 'dehss',
     titles: [
       'BOT Developer',
       'WEB Developer',
@@ -19,10 +20,10 @@ const texts: Record<string, Texts> = {
       'Python Developer'
     ],
     about:
-      "Hi there! I'm Olivier, and I'm 16 years old. In my free time, I enjoy playing computer games and programming, although programming has really captured my heart. I've been programming since 2022 (2 years), and it still brings me a lot of joy."
+      "Hi there! I'm Sebastian, and I'm 16 years old. In my free time, I enjoy playing computer games and programming, although programming has really captured my heart. I've been programming since 2022 (2 years), and it still brings me a lot of joy."
   },
   pl: {
-    name: 'cysk',
+    name: 'dehss',
     titles: [
       'BOT Developer',
       'WEB Developer',
@@ -30,7 +31,7 @@ const texts: Record<string, Texts> = {
       'Python Developer'
     ],
     about:
-      'Cześć! Jestem Olivier, mam 16 lat. W wolnym czasie lubię grać w gry komputerowe i programować, choć programowanie naprawdę mnie urzekło. Programuję od 2022 roku (2 lata) i nadal sprawia mi to dużo radości.'
+      'Cześć! Jestem Sebastian, mam 16 lat. W wolnym czasie lubię grać w gry komputerowe i programować, choć programowanie naprawdę mnie urzekło. Programuję od 2022 roku (2 lata) i nadal sprawia mi to dużo radości.'
   }
 };
 
@@ -44,7 +45,7 @@ const Banner = () => {
       <div className="w-44 h-44 md:top-[-1.5rem] relative rounded-full bg-black">
         <Image
           className="w-full h-full rounded-full z-[1] border-[1px] border-red-600 p-2 object-cover"
-          src={ProfileIMG}
+          src={Avatar}
           alt="ProfileImg"
         />
       </div>

@@ -35,18 +35,18 @@ const Contact = () => {
         <p className="text-lg tracking-wide font-medium text-center">
         {texts[language].about}
         </p>
-        <a href="mailto:erfwwef45@outlook.com">
+        <a href="">
           <button className="w-52 h-14 bg-gradient-to-r from-red-600  text-xl font-bold text-white rounded-lg hover:from-black  hover:to-red-600 duration-300">
           {texts[language].aboutone}
           </button>
         </a>
       </div>
       <div className="mt-8 flex items-center flex-wrap   gap-8 justify-center">
-        <SocialLink title="Github" link="https://github.com/itscysk" />
-        <SocialLink title="Youtube" link="https://www.youtube.com/@cyskofficial_" />
+        <SocialLink title="Github" link="" />
+        <SocialLink title="Youtube" link="" />
         <SocialLink
           title="Discord"
-          link="https://discord.com/users/358595322148290562"
+          link="https://discord.com/users/309982279579467776"
         />
       </div>
     </div>

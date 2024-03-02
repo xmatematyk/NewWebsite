@@ -95,15 +95,15 @@ const ProjectCard = ({ project, isModalOpen, openModal, closeModal }: Props) => 
             <h1 className="text-white  font-bold  p-2 relative md:text-[2rem] text-xl ">
               {title}
               <div className="">
-              <div className="wrapper absolute top-[-8.5rem] md:w-[25rem] left-[19rem]"></div></div>
+              <div className="wrapper absolute top-[-8.5rem] md:w-[25rem] left-[20rem]"></div></div>
             </h1>
             <h2 className="text-red-600 text-responsive  font-normal text-base top-[-0.5rem] left-[0.5rem] relative  py-1 text-xl ">
               {len} 
             </h2>
-            <h2 className="pl-[0.5rem]   md:text-[1rem] top-[-.5rem] relative  text-xs">
+            <h2 className="pl-[0.5rem] py-1  md:text-[1rem] top-[-.5rem] relative  text-xs">
               {des}
             </h2>
-            <h1 className="text-white md:show hidden md:block font-bold text-3xl top-[1rem] pl-[0.5rem] md:top-[0.5rem] h-auto  pl-[0.5rem] relative">
+            <h1 className="text-white md:show hidden  md:block font-bold text-3xl top-[1rem] pl-[0.5rem] md:top-[0.5rem] h-auto  pl-[0.5rem] relative">
               Linki
               <div className="wrapper top-[-8.8rem]  md:w-[40rem]  left-[6rem] absolute"></div>
               <h2 className="text-red-600 font-normal text-base md:top-[0.5rem]  relative">

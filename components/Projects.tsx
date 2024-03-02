@@ -84,6 +84,7 @@ const projects: Project[] = [
     category: "Web",
   },
   
+  
 ];
 
 const Projects = () => {

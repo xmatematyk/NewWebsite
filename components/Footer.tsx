@@ -35,7 +35,7 @@ const Footer = () => {
   const { language } = useLanguage();
   return (
     <p className="text-sm py-2 bg-gray-950 md:h-full h-[4rem]">
-      © 2024 dehss {texts[language].name} <span className="" style={{ float: "right" }}>{texts[language].abouttwo}  <a href="" target="_blank">dehss </a></span>
+      © 2024 spyfast {texts[language].name} <span className="" style={{ float: "right" }}>{texts[language].abouttwo}  <a href="" target="_blank">spyfast </a></span>
     </p>
   );
 };

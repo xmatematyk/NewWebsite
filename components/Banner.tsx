@@ -12,7 +12,7 @@ interface Texts {
 
 const texts: Record<string, Texts> = {
   en: {
-    name: 'dehss',
+    name: 'spyfast',
     titles: [
       'BOT Developer',
       'WEB Developer',
@@ -23,7 +23,7 @@ const texts: Record<string, Texts> = {
       "Hi there! I'm Sebastian, and I'm 16 years old. In my free time, I enjoy playing computer games and programming, although programming has really captured my heart. I've been programming since 2022 (2 years), and it still brings me a lot of joy."
   },
   pl: {
-    name: 'dehss',
+    name: 'spyfast',
     titles: [
       'BOT Developer',
       'WEB Developer',

@@ -4,7 +4,7 @@ import Cysk from "./cysklogo.png"
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "dehss.netlify.app",
+  title: "spyfast.netlify.app",
   description: "",
 };
 

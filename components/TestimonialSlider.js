@@ -16,20 +16,20 @@ const texts = {
   en: {
     name: 'Customer',
     about:
-      "The bot provided by olus proved to be extremely useful and revolutionized our Discord server. Thanks to it, the work of administrators has become much easier and more efficient. I am delighted with the functionality and professionalism of Cysk. I highly recommend his services to anyone looking for an excellent bot at the highest level!",
+      "The bot provided by Sebastian proved to be extremely useful and revolutionized our Discord server. Thanks to it, the work of administrators has become much easier and more efficient. I am delighted with the functionality and professionalism of Cysk. I highly recommend his services to anyone looking for an excellent bot at the highest level!",
     aboutone:
-      "When I first started communicating with olus, he seemed more introverted. However, after ordering a website from him, I completely changed my mind. He is understanding, patient, and executes everything according to the client's wishes. He can also provide helpful advice to ensure affordability and quality. I highly recommend him!",
+      "When I first started communicating with Sebastian, he seemed more introverted. However, after ordering a website from him, I completely changed my mind. He is understanding, patient, and executes everything according to the client's wishes. He can also provide helpful advice to ensure affordability and quality. I highly recommend him!",
     abouttwo:
-      "olus provided us with a website connected to a Discord bot. Despite minor complications, he quickly fixed and improved them. The website is neat, beautiful, and user-friendly, while the bot operates flawlessly. His flexibility and readiness to address issues significantly facilitated the entire collaboration. I wholeheartedly recommend him!",
+      "Sebastian provided us with a website connected to a Discord bot. Despite minor complications, he quickly fixed and improved them. The website is neat, beautiful, and user-friendly, while the bot operates flawlessly. His flexibility and readiness to address issues significantly facilitated the entire collaboration. I wholeheartedly recommend him!",
   },
   pl: {
     name: 'Klient',
     about:
-      'Bot dostarczony przez Oliviera okazał się niezwykle przydatny i zrewolucjonizował nasz serwer Discord. Dzięki niemu praca administratorów stała się znacznie łatwiejsza i bardziej efektywna. Jestem zachwycony funkcjonalnością i profesjonalizmem Cyska. Gorąco polecam jego usługi wszystkim poszukującym doskonałego bota oraz na najwyższym poziomie!',
+      'Bot dostarczony przez Sebastiana okazał się niezwykle przydatny i zrewolucjonizował nasz serwer Discord. Dzięki niemu praca administratorów stała się znacznie łatwiejsza i bardziej efektywna. Jestem zachwycony funkcjonalnością i profesjonalizmem Cyska. Gorąco polecam jego usługi wszystkim poszukującym doskonałego bota oraz na najwyższym poziomie!',
     aboutone:
-      "Kiedy zaczałem pisac z  Olivierem, wydawało się, że jest on bardziej introwertyczny. Jednak po zamówieniu przeze mnie strony, całkowicie zmieniłem zdanie. Jest wyrozumiały, cierpliwy i wykonuje wszystko zgodnie z życzeniem klienta. Potrafi również udzielić przydatnych porad, aby było tanio i dobrze. Polecam go serdecznie!",
+      "Kiedy zaczałem pisac z Sebastianem, wydawało się, że jest on bardziej introwertyczny. Jednak po zamówieniu przeze mnie strony, całkowicie zmieniłem zdanie. Jest wyrozumiały, cierpliwy i wykonuje wszystko zgodnie z życzeniem klienta. Potrafi również udzielić przydatnych porad, aby było tanio i dobrze. Polecam go serdecznie!",
     abouttwo:
-"Olivier dostarczył nam stronę internetową połączoną z botem na Discord. Mimo drobnych komplikacji szybko je naprawił i ulepszył. Strona jest schludna, ładna i przejrzysta, a bot działa bezbłędnie. Jego elastyczność i gotowość do rozwiązania problemów znacząco ułatwiły całą współpracę. Polecam go z całego serca!"  }
+"Sebastian dostarczył nam stronę internetową połączoną z botem na Discord. Mimo drobnych komplikacji szybko je naprawił i ulepszył. Strona jest schludna, ładna i przejrzysta, a bot działa bezbłędnie. Jego elastyczność i gotowość do rozwiązania problemów znacząco ułatwiły całą współpracę. Polecam go z całego serca!"  }
 };
 
 const TestimonialSlider = () => {

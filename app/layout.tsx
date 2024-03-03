@@ -5,7 +5,7 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   title: "spyfast.netlify.app",
-  description: "",
+  description: "siema",
 };
 
 export default function RootLayout({
